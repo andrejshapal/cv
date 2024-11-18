@@ -1,0 +1,120 @@
+/*Andrejs Šapals as24193*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Exa:wght@100..900&display=swap');
+
+body{
+  width: 100%;
+  font-family: "Lato", serif;
+  min-width: 1200px;
+}
+
+.header-top{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(252, 250, 247);
+}
+/* beige rgb(192,176,161) */
+.title {
+  width: 30%;
+  align-content:center;
+  text-transform: uppercase;
+  color: #3a3328;
+}
+
+.title-text {
+  font-family: "Lexend Exa", serif;
+}
+
+.red-text {
+  color: rgb(205, 29, 46);
+}
+
+.discount-ad{
+  background-color: rgb(99, 82, 67, 0.7);
+}
+
+#footer {
+  display: flex;
+  width: 100%;
+  align-content: space-between;
+}
+.footer-col {
+  background-color: rgb(192,176,161);
+  width: 100%;
+}
+
+.sale-card{
+  background-color: rgb(205, 29, 46);
+  width: 100%;
+}
+
+#returns {
+  background-color: rgb(99, 82, 67);
+  color: #FFF;
+}
+
+.search-box {
+  width: 40%;
+  align-content:center;
+
+  & > input {
+    width: 100%;
+    border-radius: 1.625rem;
+    height: 30px;
+  }
+}
+
+.links {
+  width: 30%;
+  align-content:center;
+}
+
+.nav-bar{
+  display: flex;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+  height: 40px;
+}
+.has-sub-menu, .no-sub-menu {
+    flex-grow: 1;
+    flex-basis: calc(100% / 7);
+}
+
+.sub-menu{
+  visibility: hidden;
+}
+
+#discounts{
+  display: flex;
+}
+#discounts > .section-col{
+  width: 50%;
+  & > img {
+    width: 100%;
+  };
+}
+
+.section-col{
+  align-content: center;
+  text-align: center;
+}
+
+.product-list{
+  width: 100%;
+  display: flex;
+}
+.product-group{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+}
+
+.product-image {
+  width: 100%;
+  & > img {
+    width: 100%;
+  }
+}
