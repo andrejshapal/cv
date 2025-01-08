@@ -23,9 +23,9 @@
   <main>
     <div>
       <aside>
-        <div id="photo_block"><img src="images/photo.png" id="photo"></div>
+        <div id="photo_block"><img src="images/photo.png" id="photo" alt="photo"></div>
         <div id="contacts">
-          <div id="menu-title">Contacts</div>
+          <div class="menu-title">Contacts</div>
           <div class="middle"><span class="icon-phone contacts-icon"><span class="path1"></span><span
                 class="path2"></span></span><span><a id="phone" class="white-link click-to-see" href="#human-form">Click
                 to see</a>
@@ -49,7 +49,7 @@
                 class="path2"></span><span class="path3"></span></span><span>Riga, Latvia</span></div>
         </div>
         <div id="languages">
-          <div id="menu-title">Languages</div>
+          <div class="menu-title">Languages</div>
           <div class="language">
             <div class="language-col">
               <div class="language-row">
@@ -94,6 +94,7 @@
               <div class="language-comm">Native speaker</div>
             </div>
           </div>
+        </div>
       </aside>
     </div>
     <div style="height: 100%;">
@@ -113,11 +114,13 @@
             <div>A creative approach to analyzing information allows me to learn quickly. It drives me to automate
               routine
               tasks.
-              It helps me find attractiveness even in the most monotonous work. It pushes me to discover new solutions
+              It helps me find attractiveness even in the most monotonous work. It pushes me to discover new
+              solutions
               and
               improve existing ones, to never stop, and to move forward every day.</div>
 
-            <div>This is also why I enjoy sports, music, and art in general—they provide a sense of not being stuck in
+            <div>This is also why I enjoy sports, music, and art in general—they provide a sense of not being stuck
+              in
               the
               present.</div>
             <div>
@@ -127,7 +130,8 @@
               colleagues,
               showing kindness, and acting fairly.</div>
             <div>
-              I admit it's not always easy to work with me, but every single employer I've had would hire me again. I
+              I admit it's not always easy to work with me, but every single employer I've had would hire me again.
+              I
               believe
               this is due to my dedication, professionalism, efficiency, and ethics.</div>
           </div>
@@ -157,10 +161,11 @@
       <div class="main-block">
         <h1>Human Check</h1>
         <form id="human-form">
-          <label for="hcheck">I wish to reveal my contact information to humans only. Please type below the first name
+          <label for="hcheck">I wish to reveal my contact information to humans only. Please type below the first
+            name
             of the main character in the Harry Potter book series.</label><br>
           <input type="text" id="hcheck" name="fname">
-          <button class="show-more" id="about-button" type="submit">Submit</button>
+          <button class="show-more" id="submit-button" type="submit">Submit</button>
           <div id="not-human" class="about-hidden">The name is not correct 🤔</div>
         </form>
       </div>

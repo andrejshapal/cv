@@ -94,6 +94,7 @@
 html {
   max-width: 1280px;
   margin: 0 auto;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -172,7 +173,7 @@ aside {
   margin-bottom: 20px;
 }
 
-#menu-title{
+.menu-title{
   background-color: #1d1b34;
   width: 105%;
   margin-left: -2.5%;
