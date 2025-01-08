@@ -72,154 +72,45 @@
   font-style: italic;
 }
 
-/* CUSTOM FONT */
-@font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?c1uvq1');
-  src:  url('fonts/icomoon.eot?c1uvq1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?c1uvq1') format('truetype'),
-    url('fonts/icomoon.woff?c1uvq1') format('woff'),
-    url('fonts/icomoon.svg?c1uvq1#icomoon') format('svg');
-  font-weight: normal;
+.menu-new-tab {
+  color:#FFF;
+  font-size: medium;
+  text-decoration: none;
+  vertical-align:middle;
+}
+
+.white-link{
+  color:#FFF;
+  text-decoration: none;
   font-style: normal;
-  font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-email .path1:before {
-  content: "\e907";
-  color: rgb(17, 16, 31);
-}
-.icon-email .path2:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path3:before {
-  content: "\e90b";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path4:before {
-  content: "\e90c";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path5:before {
-  content: "\e90d";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path6:before {
-  content: "\e90e";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path7:before {
-  content: "\e90f";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-email .path8:before {
-  content: "\e910";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-github .path1:before {
-  content: "\e911";
-  color: rgb(17, 16, 31);
-}
-.icon-github .path2:before {
-  content: "\e912";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-position .path1:before {
-  content: "\e900";
-  color: rgb(17, 16, 31);
-}
-.icon-position .path2:before {
-  content: "\e901";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-position .path3:before {
-  content: "\e902";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-linkdn .path1:before {
-  content: "\e903";
-  color: rgb(17, 16, 31);
-}
-.icon-linkdn .path2:before {
-  content: "\e904";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-linkdn .path3:before {
-  content: "\e905";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-linkdn .path4:before {
-  content: "\e906";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-phone .path1:before {
-  content: "\e909";
-  color: rgb(17, 16, 31);
-}
-.icon-phone .path2:before {
-  content: "\e90a";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-}
-.icon-star-empty:before {
-  content: "\e9d7";
-}
-.icon-star-half:before {
-  content: "\e9d8";
-}
-.icon-star-full:before {
-  content: "\e9d9";
+.icon-new-tab:before {
+  content: "\ea7e";
 }
 
 /* CSS */
-
+html {
+  max-width: 1280px;
+  margin: 0 auto;
+}
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin: 0px 0px 0px 0px;
 }
-
 header {
   height: 350px;
   background-color: #0c1a22;
-  justify-content: end;
+  justify-content: center;
   display: flex;
 }
 
 #header{
   background-image: repeating-linear-gradient(to right, #0c1a22, #1f1b37, #0c1a22);
+  margin-left: 380px;
   height: 100%;
-  width: calc(100vw - 370px);
   color: #FFF;
   text-transform: uppercase;
   text-align: center;
@@ -230,17 +121,18 @@ header {
 }
 
 #name{
-  font-size: 7vw;
+  font-size: clamp(30px, 5vw, 70px);
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
 
 #position{
-  font-size: 1.8vw;
-  letter-spacing: 1vw;
+  font-size: clamp(8px, 1vw, 20px);
+  letter-spacing: clamp(2px, 1vw, 12px);
   font-weight: 300;
   padding-top: 0px;
   margin-top: 0px;
+  white-space: nowrap;
 }
 
 #border{
@@ -252,25 +144,22 @@ header {
 }
 
 aside {
-  position: absolute;
-  top: 40px;
-  width: 400px;
-  height: 100%;
-}
-#aside{
+  margin-top: -300px;
+  margin-left: 20px;
+  margin-right: 20px;
   width: 360px;
-  min-height: 100%;
   background-color: #3c4264;
-  margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   color: #FFF;
-  font-size: 25px;
+  font-size: 22px;
   vertical-align: middle;
   font-weight: 300;
+  min-height: calc(100% + 300px);
+
 }
 
 #photo_block{
@@ -288,7 +177,7 @@ aside {
   margin-left: -2.5%;
   color: #ac59c4;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -339,4 +228,148 @@ aside {
 
 .caps {
   text-transform: uppercase;
+}
+
+main{
+  display: flex;
+  min-height: 100%;
+}
+
+.main-block{
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  background-color: #1d1b34;
+  color: #ac59c4;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.about-hidden{
+  visibility:hidden;
+  height: 0px;
+}
+
+.show-more{
+  margin-top: 7px;
+  height: 30px;
+  margin-bottom: 7px;
+}
+
+#hcheck{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-width: 1px;
+  border-radius: 12px;
+  height: 25px;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+button{
+  color: #3c4264;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #FFF;
+  border-color: #3c4264;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 12px;
+}
+
+
+button:hover{
+
+  color: #FFF;
+  background-color: #3c4264;
+  border-color: #3c4264;
+}
+
+.button-pressed{
+  color: #FFF;
+  background-color: #3c4264;
+  border-color: #3c4264;
+}
+
+.button-middle{
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+}
+
+.skills-button{
+  height: 40px;
+  width: 40px;
+  font-size: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills-buttons{
+display: flex;
+gap: 5px;
+}
+
+.job{
+  margin-bottom: 10px;
+}
+
+.job-position{
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+#skills-list{
+  list-style: none;
+  padding-left: 0;
+}
+
+#skills-list > li{
+  padding: 5px 5px 5px 5px;
+  list-style: none;
+  border: 2px #ac59c4 solid;
+  border-top: 0px
+}
+#skills-list > li:first-child{
+  padding: 5px 5px 5px 5px;
+  list-style: none;
+  border: 2px #ac59c4 solid
+}
+
+
+.skills-list-div{
+  width: 99%;
+  margin: 0 auto;
+}
+.pink{
+  color: #ac59c4;
+}
+h3{
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 3px #ac59c4 solid;
+  width:fit-content;
+}
+
+#not-human {
+color: #ac59c4;
+font-weight: bold;
+}
+
+.click-to-see {
+  text-transform:uppercase;
+  font-weight:400;
+  font-size: medium;
+  background-color: #0c1a22;
+  padding: 4px;
 }
