@@ -1,3 +1,4 @@
+// Andrejs Šapals as24193
 window.addEventListener("DOMContentLoaded", (event) => {
   const about = document.getElementById("about");
   const aboutButton = document.getElementById("about-button");
