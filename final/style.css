@@ -1,3 +1,10 @@
+:root {
+  --bgdark: #222831;
+  --bglight: #393E46;
+  --main: #00FFF5;
+  --gradient: #00fff71e;
+}
+
 /* Andrejs Šapals as24193 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -104,13 +111,13 @@ body {
 }
 header {
   height: 350px;
-  background-color: #0c1a22;
+  background-color: var(--bgdark);
   justify-content: center;
   display: flex;
 }
 
 #header{
-  background-image: repeating-linear-gradient(to right, #0c1a22, #1f1b37, #0c1a22);
+  background-image: repeating-linear-gradient(to right, var(--bgdark), var(--gradient), var(--bgdark));
   margin-left: 380px;
   height: 100%;
   color: #FFF;
@@ -150,7 +157,7 @@ aside {
   margin-left: 20px;
   margin-right: 20px;
   width: 360px;
-  background-color: #3c4264;
+  background-color: var(--bglight);
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
@@ -174,10 +181,10 @@ aside {
 }
 
 .menu-title{
-  background-color: #1d1b34;
+  background-color: var(--bgdark) ;
   width: 105%;
   margin-left: -2.5%;
-  color: #ac59c4;
+  color: var(--main);
   text-transform: uppercase;
   font-size: 30px;
   text-align: center;
@@ -225,7 +232,7 @@ aside {
 }
 
 .font-dark {
-  color: #1d1b34;
+  color: var(--bgdark) ;
 }
 
 .caps {
@@ -243,8 +250,8 @@ main{
 }
 
 h1 {
-  background-color: #1d1b34;
-  color: #ac59c4;
+  background-color: var(--bgdark) ;
+  color: var(--main);
   text-transform: uppercase;
   font-size: 30px;
   text-align: center;
@@ -278,11 +285,11 @@ h1 {
 }
 
 button{
-  color: #3c4264;
+  color: var(--bglight);
   font-weight: 400;
   text-transform: uppercase;
   background-color: #FFF;
-  border-color: #3c4264;
+  border-color: var(--bglight);
   border-style: solid;
   border-width: 1px;
   border-radius: 12px;
@@ -292,14 +299,14 @@ button{
 button:hover{
 
   color: #FFF;
-  background-color: #3c4264;
-  border-color: #3c4264;
+  background-color: var(--bglight);
+  border-color: var(--bglight);
 }
 
 .button-pressed{
   color: #FFF;
-  background-color: #3c4264;
-  border-color: #3c4264;
+  background-color: var(--bglight);
+  border-color: var(--bglight);
 }
 
 .button-middle{
@@ -339,13 +346,13 @@ gap: 5px;
 #skills-list > li{
   padding: 5px 5px 5px 5px;
   list-style: none;
-  border: 2px #ac59c4 solid;
+  border: 2px var(--main) solid;
   border-top: 0px
 }
 #skills-list > li:first-child{
   padding: 5px 5px 5px 5px;
   list-style: none;
-  border: 2px #ac59c4 solid
+  border: 2px var(--main) solid
 }
 
 
@@ -354,17 +361,17 @@ gap: 5px;
   margin: 0 auto;
 }
 .pink{
-  color: #ac59c4;
+  color: var(--main);
 }
 h3{
   font-weight: 400;
   text-transform: uppercase;
-  border-bottom: 3px #ac59c4 solid;
+  border-bottom: 3px var(--main) solid;
   width:fit-content;
 }
 
 #not-human {
-color: #ac59c4;
+color: var(--main);
 font-weight: bold;
 }
 
@@ -372,6 +379,6 @@ font-weight: bold;
   text-transform:uppercase;
   font-weight:400;
   font-size: medium;
-  background-color: #0c1a22;
+  background-color: var(--bgdark);
   padding: 4px;
 }
