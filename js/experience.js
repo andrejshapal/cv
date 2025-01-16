@@ -2,12 +2,12 @@ const experience = [
   {
     title: "Principal Application Support Engineer",
     company: "Proxy Live Solutions, Riga (Latvia)",
-    period: "August 2022 - Present",
+    period: "November 2023 - Present",
   },
   {
     title: "Application Support Engineer",
     company: "Proxy Live Solutions, Riga (Latvia)",
-    period: "November 2022 - August 2022",
+    period: "November 2022 - November 2023",
   },
   {
     title: "Project Manager",
