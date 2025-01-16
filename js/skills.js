@@ -212,7 +212,7 @@ const skills = [
   },
   {
     name: "Project Management",
-    icon: "icon-k8s",
+    icon: "icon-pm",
     items: [
       {
         name: "Agile - Scrum",
