@@ -52,9 +52,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   const skillsButtons = document.getElementById("skills-buttons");
-  const skillsTitle = document.getElementById("skills-title");
-  const skillsList = document.getElementById("skills-list");
+  // const skillsTitle = document.getElementById("skills-title");
+  // const skillsList = document.getElementById("skills-list");
+  const skillDiv = document.getElementById("skill");
   let clicked;
+
   skills.map((skill) => {
     const button = document.createElement("button");
     button.classList = "skills-button";
@@ -64,48 +66,47 @@ window.addEventListener("DOMContentLoaded", (event) => {
     span.classList = skill.icon;
     button.appendChild(span);
     skillsButtons.appendChild(button);
-    button.addEventListener("click", () => {
-      skillsTitle.textContent = skill.name;
-      skillsList.textContent = "";
-      skill.items.map((item) => {
-        const el = document.createElement("li");
-        const name = document.createElement("b");
-        const dash = document.createElement("span");
-        const description = document.createElement("span");
-        name.textContent = item.name;
-        dash.textContent = " - ";
-        description.textContent = item.description;
-        el.appendChild(name);
-        el.appendChild(dash);
-        el.appendChild(description);
-        skillsList.appendChild(el);
-        if (clicked) clicked.classList = "skills-button";
-        button.classList = "skills-button button-pressed";
-        clicked = button;
-      });
-    });
-    if (skill.default) button.click();
-  });
 
-  const form = document.getElementById("human-form");
-  const error = document.getElementById("not-human");
-  const phone = document.getElementById("phone");
-  const email = document.getElementById("email");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const hcheck = document.getElementById("hcheck");
-    if (hcheck.value.toLowerCase() != atob("aGFycnk=")) {
-      error.classList = "";
-    } else {
-      error.classList = "about-hidden";
-      hcheck.value = "";
-      phone.classList = "white-link";
-      email.classList = "white-link";
-      phone.href = `tel:${atob("KzM3MTI1MjYzMTY5")}`;
-      phone.textContent = atob("KzM3MTI1MjYzMTY5");
-      email.href = `mailto:${atob("bmp1aGFhbmRyZWpAZ21haWwuY29t")}`;
-      email.textContent = atob("bmp1aGFhbmRyZWpAZ21haWwuY29t");
-      phone.scrollIntoView();
-    }
+    // <h3 id="skills-title">Monitoring</h3>
+    // <ul id="skills-list">
+
+    const skillsTitle = document.createElement("h3");
+    skillsTitle.classList = "skills-title";
+    skillsTitle.textContent = skill.name;
+    const skillsList = document.createElement("ul");
+    skillsList.classList = "skills-list";
+    skill.items.map((item) => {
+      const el = document.createElement("li");
+      const name = document.createElement("b");
+      const dash = document.createElement("span");
+      const description = document.createElement("span");
+      name.textContent = item.name;
+      dash.textContent = " - ";
+      description.textContent = item.description;
+      el.appendChild(name);
+      el.appendChild(dash);
+      el.appendChild(description);
+      skillsList.appendChild(el);
+      if (clicked) clicked.classList = "skills-button";
+      button.classList = "skills-button button-pressed";
+      clicked = button;
+    });
+    skillDiv.appendChild(skillsTitle);
+    skillDiv.appendChild(skillsList);
   });
+  if (skill.default) button.click();
+});
+
+const form = document.getElementById("human-form");
+const error = document.getElementById("not-human");
+const phone = document.getElementById("phone");
+const email = document.getElementById("email");
+window.addEventListener("DOMContentLoaded", (e) => {
+  phone.classList = "white-link";
+  email.classList = "white-link";
+  phone.href = `tel:${atob("KzM3MTI1MjYzMTY5")}`;
+  phone.textContent = atob("KzM3MTI1MjYzMTY5");
+  email.href = `mailto:${atob("bmp1aGFhbmRyZWpAZ21haWwuY29t")}`;
+  email.textContent = atob("bmp1aGFhbmRyZWpAZ21haWwuY29t");
+  phone.scrollIntoView();
 });
