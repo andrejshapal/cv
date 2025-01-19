@@ -30,6 +30,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
     jobs.appendChild(jobDiv);
   });
 
+  const edu = document.getElementById("edu");
+  education.map((org) => {
+    const eduDiv = document.createElement("div");
+    eduDiv.classList = "job";
+
+    const eduTitle = document.createElement("div");
+    eduTitle.classList = "job-position";
+    eduTitle.textContent = org.title;
+    eduDiv.appendChild(eduTitle);
+
+    const eduDegree = document.createElement("div");
+    eduDegree.textContent = org.degree;
+    eduDiv.appendChild(eduDegree);
+
+    const eduPeriod = document.createElement("div");
+    eduPeriod.textContent = org.period;
+    eduDiv.appendChild(eduPeriod);
+
+    edu.appendChild(eduDiv);
+  });
+
   const skillsButtons = document.getElementById("skills-buttons");
   const skillsTitle = document.getElementById("skills-title");
   const skillsList = document.getElementById("skills-list");
